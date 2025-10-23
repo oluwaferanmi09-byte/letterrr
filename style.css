@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  overflow: auto;
+  background: linear-gradient(135deg, #0d0d2b, #3a0f5c); /* Hogwarts night sky */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.center {
+  padding: 20px;
+  animation: floatIn 2s ease;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #fff;
+  max-width: 600px;
+  margin: auto;
+}
+
+button {
+  background-color: #fff;
+  color: #7f00ff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #e0c1ff;
+  transform: scale(1.05);
+}
+
+/* Magical button glow */
+.magical-btn {
+  box-shadow: 0 0 15px #ff69b4, 0 0 30px #7f00ff;
+  transition: 0.3s;
+}
+.magical-btn:hover {
+  box-shadow: 0 0 25px #ff69b4, 0 0 50px #7f00ff;
+}
+
+/* Images */
+img {
+  width: 230px;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+img:hover {
+  transform: scale(1.08);
+}
+
+/* Gallery hover levitate */
+.gallery img {
+  width: 120px;
+  margin: 5px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.gallery img:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
+/* Fade-in animations */
+.fade-in {
+  animation: fadeIn 2s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatIn {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation: typing 3.5s steps(40, end), blink 0.7s infinite;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  font-size: 24px;
+  top: -10px;
+  animation: fall linear forwards;
+  z-index: 9999;
+}
+@keyframes fall {
+  to { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Click to reveal envelope */
+.envelope {
+  font-size: 80px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+/* Hidden content initially */
+.hidden {
+  display: none;
+}
+
+/* Sparkles */
+.sparkle {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Wand hover sparkle effect (on letter hover) */
+.wand-sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.9;
+  animation: sparkleFade 1s linear forwards;
+}
+@keyframes sparkleFade {
+  from { transform: scale(0); opacity: 1; }
+  to { transform: scale(1.5); opacity: 0; }
+}
