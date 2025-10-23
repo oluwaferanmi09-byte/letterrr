@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Love 💌</title>
+<link rel="stylesheet" href="style.css">
+<script src="hearts.js" defer></script>
+<script src="sparkles.js" defer></script>
+<script src="wand.js" defer></script>
+</head>
+<body class="home">
+
+  <div class="center fade-in">
+    <h1 class="typewriter">Hey, my love 💕</h1>
+    <p>Click the magical envelope to see your letter:</p>
+
+    <div class="envelope" onclick="revealLetter()">💌</div>
+
+    <div id="letterMessage" class="hidden">
+      <p>Every day apart makes me love you more. I made this so you never forget how special you are to me 💗</p>
+      
+      <iframe width="300" height="50"
+        src="https://www.youtube.com/embed/CwGbMYLjIpQ?loop=1&playlist=CwGbMYLjIpQ"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+
+      <button class="magical-btn" onclick="location.href='memories.html'">Next ➡</button>
+    </div>
+  </div>
+
+<script>
+function revealLetter() {
+  document.getElementById('letterMessage').classList.remove('hidden');
+  document.querySelector('.envelope').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
