@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Love Letter 💖</title>
+<link rel="stylesheet" href="style.css">
+<script src="hearts.js" defer></script>
+<script src="sparkles.js" defer></script>
+<script src="wand.js" defer></script>
+</head>
+<body class="letter">
+
+  <div class="center fade-in">
+    <h1>To My Dearest 💗</h1>
+    
+    <img src="herphoto.jpg" alt="Her beautiful smile">
+
+    <!-- Click to reveal letter -->
+    <div class="envelope" onclick="revealLetter()">💌 Click me to reveal your letter!</div>
+
+    <div id="letterMessage" class="hidden">
+      <p class="typewriter">
+        My love, every day apart makes me cherish you even more. 
+        You are my magic, my heart, and my home. I can’t wait until we are together again 💖
+      </p>
+
+      <!-- Click-to-play music -->
+      <p>🎶 Click to play our song:</p>
+      <iframe width="300" height="50"
+        src="https://www.youtube.com/embed/CwGbMYLjIpQ?loop=1&playlist=CwGbMYLjIpQ"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+
+      <button class="magical-btn" onclick="location.href='memories.html'">Next ➡</button>
+    </div>
+  </div>
+
+<script>
+function revealLetter() {
+  document.getElementById('letterMessage').classList.remove('hidden');
+  document.querySelector('.envelope').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
